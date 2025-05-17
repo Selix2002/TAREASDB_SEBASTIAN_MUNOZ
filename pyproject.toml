@@ -1,0 +1,12 @@
+[project]
+name = "tarean1-sebastian-munoz"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.15.2",
+    "pgcli>=4.3.0",
+    "psycopg2-binary>=2.9.10",
+    "sqlalchemy>=2.0.40",
+]
