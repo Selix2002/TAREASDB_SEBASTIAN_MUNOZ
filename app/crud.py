@@ -43,21 +43,8 @@ def get_all_grupos_dispositivo(db: Session) -> list[GrupoDispositivos]:
 # Gestión de Dispositivos
 # ————————————————————————————————
 
-def create_dispositivo(
-    db: Session,
-    numero_serie: str,
-    mac_address: str,
-    version_firmware: str,
-    ubicacion: str,
-    tipo_dispositivo_id: int
-) -> Dispositivo:
-    nuevo = Dispositivo(
-        numero_serie=numero_serie,
-        mac_address=mac_address,
-        version_firmware=version_firmware,
-        ubicacion=ubicacion,
-        tipo_dispositivo_id=tipo_dispositivo_id
-    )
+def create_dispositivo(db: Session,numero_serie: str,mac_address: str,version_firmware: str,ubicacion: str,tipo_dispositivo_id: int) -> Dispositivo:
+    nuevo = Dispositivo(numero_serie=numero_serie,mac_address=mac_address,version_firmware=version_firmware,ubicacion=ubicacion,tipo_dispositivo_id=tipo_dispositivo_id)
     db.add(nuevo)
     db.commit()
     db.refresh(nuevo)

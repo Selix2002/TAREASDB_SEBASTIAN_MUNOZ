@@ -2,9 +2,15 @@
 
 from database import SessionLocal
 import crud
+from models import Base
 
+def delete_tables(db):
+    # Eliminar todas las tablas
+    Base.metadata.drop_all(db.bind)
+    # Crear nuevamente las tablas
+    #Base.metadata.create_all(db.bind)
 def main():
-    # abrimos una sesión
+    # Abrimos una sesión
     with SessionLocal() as db:
 
         # ——————————————————————————————————————————
@@ -112,4 +118,5 @@ def main():
         print("Historial SN-002:", [(log.estado, log.timestamp.strftime("%Y-%m-%d %H:%M:%S")) for log in logs2])
 
 if __name__ == "__main__":
-    main()
+    #main()
+    delete_tables(SessionLocal())

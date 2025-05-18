@@ -46,7 +46,9 @@ class Dispositivo(Base):
     numero_serie = Column(String, unique=True, nullable=False)
     mac_address = Column(String, unique=True)
     version_firmware = Column(String, nullable=False)
-    ubicacion = Column(String, nullable=False)
+    descripcion_ubicacion = Column(String, nullable=False)  #MODIFICACIÓN ADICIONAL SOLICITADA
+    coordenadas_gps = Column(String, nullable=True)   #MODIFICACIÓN ADICIONAL SOLICITADA
+    estado_actual = Column(String, nullable=True) #MODIFICACIÓN ADICIONAL SOLICITADA
     fecha_registro = Column(
         DateTime(timezone=True),
         server_default=func.now(),
@@ -75,7 +77,7 @@ class Sensor(Base):
     dispositivo_id = Column(Integer, ForeignKey('dispositivo.id'), nullable=False)
     tipo_sensor = Column(String, nullable=False)
     unidad_medida = Column(String, nullable=False)
-
+    umblal_alerta = Column(float, nullable=False) #MODIFICACIÓN ADICIONAL SOLICITADA
     # Relaciones
     dispositivo = relationship('Dispositivo', back_populates='sensores')
     lecturas = relationship('LecturaDato', back_populates='sensor', cascade="all, delete-orphan")
