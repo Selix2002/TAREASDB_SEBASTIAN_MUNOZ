@@ -85,13 +85,14 @@ postgresql+psycopg2://postgres:sebas@localhost/tarea1_db
 alembic upgrade d04a45767ede
 
 ```
+Es importante mencionar que el CRUD esta diseñado para funcionar en esta versión (esquema inicial) de la base de datos.
 Luego para ejecutar la migración con las modificaciones:
 
 ```bash
 alembic upgrade ecc3a514a9a9
 
 ```
-Es importante mencionar que el CRUD esta diseñado para funcionar en esta versión de la base de datos.
+
 El archivo *models.py* esta actualizado con dichas modificaciones.
 
 ---
