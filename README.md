@@ -85,18 +85,25 @@ postgresql+psycopg2://postgres:sebas@localhost/tarea1_db
 alembic upgrade d04a45767ede
 
 ```
+Luego para ejecutar la migración con las modificaciones:
+
+```bash
+alembic upgrade ecc3a514a9a9
+
+```
 Es importante mencionar que el CRUD esta diseñado para funcionar en esta versión de la base de datos.
+El archivo *models.py* esta actualizado con dichas modificaciones.
 
 ---
 
 ## Restaurar la base de datos desde el dump
 
-Si necesitas restaurar la base de datos a partir del dump:
+Para restaurar la base de datos a partir del dump:
 
 ```bash
 PGPASSWORD=sebas psql -U postgres -h localhost -d tarea1_db < dump.sql
 ```
-Este dump es de la base de datos sin la modificaciones
+Este dump es de la base de datos sin la modificaciones.
 
 ---
 
