@@ -1,0 +1,37 @@
+=== Tipos de Dispositivo ===
+Tipo 1: AcmeCorp X100 (Sensor genérico)
+Tipo 2: BetaTech Z200 (None)
+
+=== Grupos de Dispositivos ===
+Grupo 1: Laboratorio (Equipo de laboratorio)
+Grupo 2: Campo (Equipos de campo)
+
+=== Dispositivos ===
+Todos los dispositivos: ['SN-001', 'SN-002']
+Por tipo X100: ['SN-001']
+Por tipo Z200: ['SN-002']
+Grupos de SN-001: ['Laboratorio', 'Campo']
+Después de quitar 'Campo' de SN-001: ['Laboratorio']
+Dispositivos en 'Laboratorio': ['SN-001']
+
+=== Operaciones con SN-002 ===
+Grupos de SN-002: ['Campo']
+Dispositivos en 'Campo': ['SN-002']
+
+=== Sensores de SN-001 ===
+Sensores SN-001: [(1, 'Temperatura'), (2, 'Humedad')]
+
+=== Sensores de SN-002 ===
+Sensores SN-002: [(3, 'Presión')]
+
+=== Lecturas de Datos SN-001 (Temperatura) ===
+Últimas lecturas SN-001: Temperatura: [(Decimal('22.8'), '2025-05-19 18:32:40'), (Decimal('23.0'), '2025-05-19 18:32:40')]
+
+=== Lecturas de Datos SN-002 (Presión) ===
+Últimas lecturas SN-002: Presión: [(Decimal('101.3'), '2025-05-19 18:32:40')]
+
+=== Logs de Estado SN-001 ===
+Historial SN-001: [('ERROR', '2025-05-19 18:32:40'), ('ONLINE', '2025-05-19 18:32:40')]
+
+=== Logs de Estado SN-002 ===
+Historial SN-002: [('OFFLINE', '2025-05-19 18:32:40')]

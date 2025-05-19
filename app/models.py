@@ -1,6 +1,6 @@
 from sqlalchemy import (
     Column, Integer, String, Text, DateTime,
-    ForeignKey, Table, Numeric, func
+    ForeignKey, Table, Numeric, func, Float
 )
 from sqlalchemy.orm import relationship, declarative_base
 
@@ -77,7 +77,7 @@ class Sensor(Base):
     dispositivo_id = Column(Integer, ForeignKey('dispositivo.id'), nullable=False)
     tipo_sensor = Column(String, nullable=False)
     unidad_medida = Column(String, nullable=False)
-    umblal_alerta = Column(float, nullable=False) #MODIFICACIÓN ADICIONAL SOLICITADA
+    umblal_alerta = Column(Float, nullable=False) #MODIFICACIÓN ADICIONAL SOLICITADA
     # Relaciones
     dispositivo = relationship('Dispositivo', back_populates='sensores')
     lecturas = relationship('LecturaDato', back_populates='sensor', cascade="all, delete-orphan")

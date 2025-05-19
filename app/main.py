@@ -9,6 +9,7 @@ def delete_tables(db):
     Base.metadata.drop_all(db.bind)
     # Crear nuevamente las tablas
     #Base.metadata.create_all(db.bind)
+    print("Tablas eliminadas y recreadas")
 def main():
     # Abrimos una sesión
     with SessionLocal() as db:
@@ -118,5 +119,5 @@ def main():
         print("Historial SN-002:", [(log.estado, log.timestamp.strftime("%Y-%m-%d %H:%M:%S")) for log in logs2])
 
 if __name__ == "__main__":
-    #main()
-    delete_tables(SessionLocal())
+    main()
+    #delete_tables(SessionLocal())
