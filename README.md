@@ -40,14 +40,7 @@ git clone https://github.com/Selix2002/TAREASDB_SEBASTIAN_MUNOZ
 cd "TAREASDB_SEBASTIAN_MUNOZ"
 ```
 
-### 2. Crear y activar un entorno virtual
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Instalar las dependencias
+### 2. Instalar las dependencias
 
 ```bash
 uv pip install -r pyproject.toml
@@ -58,7 +51,7 @@ Asegúrate de tener instalados:
 - Alembic
 - psycopg2-binary
 
-### 4. Configurar la base de datos PostgreSQL
+### 3. Configurar la base de datos PostgreSQL
 
 Crea una base de datos y un usuario en PostgreSQL:
 
